@@ -6,7 +6,14 @@ target 'TravelHistory' do
   use_frameworks!
 
   # Pods for TravelHistory
-  pod 'TwitterKit'
+  pod 'Cluster'
+  pod 'Alamofire'
+  pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
+  pod 'INTULocationManager'
+
+  #UI
+  pod 'GradientLoadingBar'
 
   target 'TravelHistoryTests' do
     inherit! :search_paths
