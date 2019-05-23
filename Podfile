@@ -10,6 +10,10 @@ target 'TravelHistory' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
+  pod 'INTULocationManager'
+
+  #UI
+  pod 'GradientLoadingBar'
 
   target 'TravelHistoryTests' do
     inherit! :search_paths

@@ -18,34 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="132" y="426.5" width="150.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="110" y="477.5" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="se4-9z-exI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="GPE-6u-W2a"/>
+                                </connections>
+                            </mapView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search Nearby" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-m7-aXP">
+                                <rect key="frame" x="0.0" y="77" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="XQM-ez-gEz"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="cMh-m7-aXP" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="1yQ-BY-NDB"/>
+                            <constraint firstItem="se4-9z-exI" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="9nq-wq-uVg"/>
+                            <constraint firstItem="se4-9z-exI" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="RtR-uv-hW4"/>
+                            <constraint firstItem="cMh-m7-aXP" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="SMg-HC-ITu"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="se4-9z-exI" secondAttribute="trailing" id="Ury-eb-ajt"/>
+                            <constraint firstItem="cMh-m7-aXP" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="33" id="pyV-aP-Kay"/>
+                            <constraint firstAttribute="bottom" secondItem="se4-9z-exI" secondAttribute="bottom" id="s6O-gO-BzA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mapView" destination="se4-9z-exI" id="rp2-PZ-3GS"/>
+                        <outlet property="searchBar" destination="cMh-m7-aXP" id="Czd-Nd-6sc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
     </scenes>
     <resources>

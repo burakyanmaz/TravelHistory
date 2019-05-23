@@ -9,6 +9,7 @@
 import UIKit
 
 struct Location {
-    var latitude: CGFloat
-    var longitude: CGFloat
+    var latitude: Float
+    var longitude: Float
+    var accuracy: Int
 }

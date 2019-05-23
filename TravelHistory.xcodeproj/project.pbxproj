@@ -11,6 +11,10 @@
 		2B741C27E891F3992DDBC31F /* Pods_TravelHistory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8835DAAB60A8FA99A077E3 /* Pods_TravelHistory.framework */; };
 		570F4E512295DD89003DB27C /* LocationRelatedHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F4E502295DD89003DB27C /* LocationRelatedHelpers.swift */; };
 		570F4E532295E385003DB27C /* EnvironmentHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F4E522295E385003DB27C /* EnvironmentHolder.swift */; };
+		570F4E552297317A003DB27C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F4E542297317A003DB27C /* LocationManager.swift */; };
+		570F4E5722973804003DB27C /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F4E5622973804003DB27C /* UIExtensions.swift */; };
+		570F4E5A22974153003DB27C /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F4E5922974153003DB27C /* AnnotationView.swift */; };
+		570F4E5C22974223003DB27C /* MapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F4E5B22974223003DB27C /* MapKitExtensions.swift */; };
 		576013DA2280B99D00373354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576013D92280B99D00373354 /* AppDelegate.swift */; };
 		576013DC2280B99D00373354 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576013DB2280B99D00373354 /* MapViewController.swift */; };
 		576013E12280B99D00373354 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576013DF2280B99D00373354 /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 		2F8835DAAB60A8FA99A077E3 /* Pods_TravelHistory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelHistory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570F4E502295DD89003DB27C /* LocationRelatedHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRelatedHelpers.swift; sourceTree = "<group>"; };
 		570F4E522295E385003DB27C /* EnvironmentHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentHolder.swift; sourceTree = "<group>"; };
+		570F4E542297317A003DB27C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		570F4E5622973804003DB27C /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		570F4E5922974153003DB27C /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		570F4E5B22974223003DB27C /* MapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitExtensions.swift; sourceTree = "<group>"; };
 		576013D62280B99D00373354 /* TravelHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576013D92280B99D00373354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576013DB2280B99D00373354 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -82,9 +90,20 @@
 			isa = PBXGroup;
 			children = (
 				570F4E502295DD89003DB27C /* LocationRelatedHelpers.swift */,
+				570F4E542297317A003DB27C /* LocationManager.swift */,
 				570F4E522295E385003DB27C /* EnvironmentHolder.swift */,
+				570F4E5622973804003DB27C /* UIExtensions.swift */,
+				570F4E5B22974223003DB27C /* MapKitExtensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		570F4E582297413A003DB27C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				570F4E5922974153003DB27C /* AnnotationView.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		576013CD2280B99D00373354 = {
@@ -140,6 +159,7 @@
 		57BD1C01228DE548002AECE3 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				570F4E582297413A003DB27C /* Models */,
 				57BD1C07228DE7F0002AECE3 /* ConnectionRepository */,
 				57BD1C04228DE784002AECE3 /* DataTransferObjects */,
 				57BD1C03228DE771002AECE3 /* ViewControllers */,
@@ -338,6 +358,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Cluster/Cluster.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientLoadingBar/GradientLoadingBar.framework",
+				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -345,6 +367,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cluster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientLoadingBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,11 +455,15 @@
 				570F4E512295DD89003DB27C /* LocationRelatedHelpers.swift in Sources */,
 				576013DA2280B99D00373354 /* AppDelegate.swift in Sources */,
 				576013DC2280B99D00373354 /* MapViewController.swift in Sources */,
+				570F4E5722973804003DB27C /* UIExtensions.swift in Sources */,
 				570F4E532295E385003DB27C /* EnvironmentHolder.swift in Sources */,
+				570F4E5A22974153003DB27C /* AnnotationView.swift in Sources */,
 				57BD1C0D228DED0D002AECE3 /* VenueSearchConnectionRepository.swift in Sources */,
 				57BD1C0B228DEC64002AECE3 /* Requester.swift in Sources */,
 				57BD1C09228DEC44002AECE3 /* ConnectionHelper.swift in Sources */,
 				57BD1C0F228DEDB0002AECE3 /* VenueSearchDTO.swift in Sources */,
+				570F4E552297317A003DB27C /* LocationManager.swift in Sources */,
+				570F4E5C22974223003DB27C /* MapKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
